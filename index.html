@@ -1,16 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>
-  Lead Tracker Pro
-    </title>
-    <link rel="stylesheet" href="index.css">
+    <title>Lead Tracker Pro</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <main>
+      <nav>
+        <section>
+          <input type="text" placeholder="Search" />
+          <button>about</button>
+          <button>contact</button>
+          <button>Dashboard</button>
+        </section>
+      </nav>
 
+      <div class="middle">
+        <section class="input-section">
+          <p>Please enter your Name !</p>
 
-    <script src="index.js">
+          <input
+            class="add-name"
+            type="text"
+            placeholder="Enter your Name"
+            id="add-input"
+          />
 
-    </script>
+          <p>Please enter your Status !</p>
+          <input
+            class="add-job"
+            type="text"
+            placeholder="Enter your Status"
+            id="add-status"
+          />
+
+          <p>Please enter your Email !</p>
+          <input
+            class="add-gmail"
+            type="email"
+            placeholder="Enter your Email"
+            id="add-email"
+          />
+
+          <p>Please enter your Comment !</p>
+          <input
+            class="add-comment"
+            type="text"
+            placeholder="Enter your Comment !"
+            id="add-opinion-input"
+          />
+
+          <p>Please enter your Date !</p>
+
+          <input class="add-birth" type="date" id="add-date" />
+
+          <button class="save-btn" id="save-btn-input">Save</button>
+        </section>
+
+        <section class="saved-section">
+          <div id="leadCard"></div>
+        </section>
+
+        <section class="fav-section">
+          <ul id="fav-lead"></ul>
+        </section>
+      </div>
+
+      <below> </below>
+    </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
