@@ -154,29 +154,35 @@ p {
   align-items: center;
   padding-left: 10px;
   color: black;
-white-space: nowrap;
+  white-space: nowrap;
 }
 
 .lead-card {
-width: 100%;
- border: 1px solid black;
- border-radius: 16px;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 16px;
   gap: 10px;
-  padding-top:5px ;
- 
+  padding-top: 5px;
+  cursor: pointer;
   padding-bottom: 5px;
-  
+
+
 }
 
-#leadCard {
-  height: 100%;
-  width: 100%;
+.lead-card {
+  box-sizing: border-box;
+  margin-bottom: 12px;
+  min-width: 220px;
+}
+
+#leadCard,
+#leadCard2 {
   display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  /* Qutining maksimal balandligi (o'zingiz xohlagancha o'lcham bering) */
-    overflow-y: auto;   /* Ma'lumot ko'payib ketsa, avtomatik skroll (scroll) chiqaradi */
-    padding-right: 5px; /* Skrollga tegib ketmasligi uchun biroz joy */
-gap: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
