@@ -64,15 +64,13 @@ saveLead.addEventListener("dblclick", function (event) {
 
   if (alreadyFavorite) return;
 
-  selectedLead.isFavorite = true;
+  selectedLead.isFavorite = true; 
   favLeads.push(selectedLead);
 
 
   savedLeads.splice(index, 1);
 
- 
   render(savedLeads, saveLead);
   render(favLeads, favDbl);
 
-  render(favLeads, favDbl);
 });
