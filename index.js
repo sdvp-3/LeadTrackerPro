@@ -44,7 +44,7 @@ saveBtn.addEventListener("click", function () {
     isFavorite: false,
   };
   savedLeads.push(obj);
-  console.log(savedLeads);
+ 
   clearInputs();
   saveLeadsToStorage();
   render(savedLeads, saveLead);
@@ -182,9 +182,6 @@ function toggleCardMenu(event) {
 
   menu.append(editButton, deleteButton);
   child.append(menu);
-
-
-  
 }
 
 saveLead.addEventListener("click", toggleCardMenu);
