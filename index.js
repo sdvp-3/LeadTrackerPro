@@ -19,11 +19,11 @@ saveBtn.addEventListener("click", function () {
       favLeads.find((item) => item.id === editId);
 
     if (lead) {
-      lead.name = addName.value.trim();
-      lead.status = addStatus.value.trim();
-      lead.email = addEmail.value.trim();
-      lead.coment = addComen.value.trim();
-      lead.date = addDate.value;
+        lead.name = addName.value.trim();
+        lead.status = addStatus.value.trim();
+        lead.email = addEmail.value.trim();
+        lead.coment = addComen.value.trim();
+        lead.date = addDate.value;
     }
 
     editId = null;
@@ -129,6 +129,7 @@ function toggleCardMenu(event) {
   if (!optionsButton) return;
 
   const child = optionsButton.closest(".child");
+  console.log(child.children.length)
   if (!child) return;
 
   const existingMenu = child.querySelector(".card-menu");
@@ -182,6 +183,7 @@ function toggleCardMenu(event) {
 
   menu.append(editButton, deleteButton);
   child.append(menu);
+  
 }
 
 saveLead.addEventListener("click", toggleCardMenu);
@@ -190,3 +192,4 @@ favDbl.addEventListener("click", toggleCardMenu);
 loadLeadsFromStorage();
 render(savedLeads, saveLead);
 render(favLeads, favDbl);
+
