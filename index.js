@@ -81,11 +81,11 @@ function render(leads, element) {
   for (let i = 0; i < leads.length; i++) {
     leadsItem += `
    <div class="lead-card" data-index = "${i}"  data-id="${leads[i].id}">
-                <p class ="saveds"><strong>Ism:</strong> ${leads[i].name}</p>
-                <p  class ="saveds"><strong>Holat:</strong> ${leads[i].status}</p>
+                <p class ="saveds"><strong>Name:</strong> ${leads[i].name}</p>
+                <p  class ="saveds"><strong>Status:</strong> ${leads[i].status}</p>
                 <p  class ="saveds"><strong>Email:</strong> ${leads[i].email}</p>
-                <p  class ="saveds"><strong>Izoh:</strong> ${leads[i].coment}</p>
-                <p  class ="saveds"><strong>Sana:</strong> ${leads[i].date}</p>
+                <p  class ="saveds"><strong>Comment:</strong> ${leads[i].coment}</p>
+                <p  class ="saveds"><strong>Date of birth:</strong> ${leads[i].date}</p>
               <div class="child">
                 <button class="trash-btn" type="button" aria-label="Lead options">
                   <img class="trash-icon" src="image/3dots.svg" alt="">

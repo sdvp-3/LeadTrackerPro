@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  background: linear-gradient(135deg, #031c2a, #72606f, #01060c);
+  background: linear-gradient(135deg, #031c2a, #72606f, #000000);
 }
 
 main {
@@ -16,14 +16,23 @@ main {
   margin: 0 auto;
   padding: 10px 16px 24px;
 }
+  header{
+   margin-top: 50px;
+  padding: 5px;
+   background-color: #07272dc0;
+   border-radius: 16px;
+    background: linear-gradient(135deg, #000000, #72566f, #000000b8);
+
+
+  }
 
 header section {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  width: min(100%, 1100px);
-  margin: 0 auto;
+    width: min(100%, 1100px);
+    margin: 0 auto;
   padding: 10px 0;
 }
 
@@ -58,8 +67,8 @@ input {
   padding: 0 15px;
   border: 1px solid transparent;
   border-radius: 16px;
-  outline: none;
-  background-color: rgb(113, 162, 174);
+  outline:1px black;
+  background-color: rgba(52, 85, 93, 0.454);
   color: white;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -74,6 +83,7 @@ input {
   padding: 20px;
   border-radius: 16px;
   background-color: #07272dc0;
+   background: linear-gradient(135deg, #090d11b0, #72566f, #000000be);
 }
 
 .title1,
@@ -153,6 +163,7 @@ p {
   width: 100%;
   margin-bottom: 10px;
   font-size: 12px;
+  background-color: #000000;
 }
 
 .add-name:hover,
@@ -160,7 +171,7 @@ p {
 .add-gmail:hover,
 .add-comment:hover,
 .add-birth:hover {
-  background-color: #07272dc0;
+  background-color: #1f4350e9;
   color: white;
 }
 
@@ -212,6 +223,10 @@ p {
   color: rgb(255, 254, 254);
   font-size: 15px;
   white-space: nowrap;
+}
+
+.saveds strong {
+  margin-right: 4px;
 }
 
 .child {
