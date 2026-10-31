@@ -27,6 +27,8 @@ const totalCountEl = document.getElementById("total-count");
 const savedCountEl = document.getElementById("saved-count");
 const favoriteCountEl = document.getElementById("favorite-count");
 
+const sortBtn = document.getElementById("sort-btn")
+
 
 
 saveBtn.addEventListener("click", function () {
@@ -257,3 +259,18 @@ dashboardBtn.addEventListener("click", function () {
   dashboard.hidden = !dashboard.hidden;
   dashboardBtn.setAttribute("aria-expanded", String(!dashboard.hidden));
 });
+
+function sortLeads(){
+  const sortLead = [...savedLeads].sort(function(a, b){
+    return a.name.locale.Compare(b.name)
+  })
+
+  const favSortLead = [...favLeads].sort(function(a, b){
+    return a.name.localeCompare(b.name)
+  })
+
+  render(sortLead, saveLead);
+  render(favSortLead, favDbl);
+}
+
+sortBtn.addEventListener("click", sortLeads)
