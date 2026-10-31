@@ -10,11 +10,24 @@
     <main>
       <header>
         <section>
-          <input type="text" placeholder="Search" />
-          <button>about</button>
-          <button>contact</button>
-          <button>Github</button>
-          <button>Dashboard</button>
+          <input id="search-input" type="text" placeholder="Search" />
+         <a href="#about-id"> <button class="buttonP" id="about-btn">about</button></a>
+         <a href="#contacts"> <button class="buttonP" id="contact-btn">contact</button></a>
+        <a href="https://github.com/sdvp-3/LeadTrackerPro">  <button class="buttonP" id="github-btn">Github</button></a>
+         <div class="dashboard-wrapper">
+  <button class="buttonP" id="dashboard-btn" type="button" aria-expanded="false">
+    Dashboard
+  </button>
+
+  <div id="dashboard" class="dashboard-panel" hidden>
+    <h3>Dashboard</h3>
+    <p>All Leads: <span id="total-count">0</span></p>
+    <p>Saved: <span id="saved-count">0</span></p>
+    <p>Favorite: <span id="favorite-count">0</span></p>
+  </div>
+</div>
+
+
         </section>
       </header>
 
@@ -73,10 +86,44 @@
         </section>
       </div>
 
-      <below> </below>
+      <section class="below"> 
+        <div class="about"  id="about-id">
+          <h1>About LeadTracker Pro</h1>
+        </div>
+        <p>
+    LeadTracker Pro is a web application for managing leads and
+    customer information. It is designed for freelancers and small
+    businesses who want to keep their contacts organized.
+  </p>
+   <h2>What can you do?</h2>
+
+     <ul>
+    <li>Add a lead with a name, status, email, comment, and date.</li>
+    <li>Edit or delete saved leads.</li>
+    <li>Move important leads to the favorites section.</li>
+    <li>Search for leads by name.</li>
+    <li>Keep lead information in the browser using localStorage.</li>
+  </ul>
+
+  <h2>Technologies</h2>
+
+  <p>
+    This project is built with HTML, CSS, and Vanilla JavaScript.
+    It is a work in progress, and more features are coming soon.
+  </p>
+      </section>
+
+      <section id="contacts">
+<div class="contacts">
+<h1>Contact</h1>
+</div>
+
+<h2>Email address and Telegram username</h2>
+<p>Email: sdu0b.dev.@gmail.com</p>
+<p>Telegram: @sndu0B</p>
+      </section>
     </main>
 
     <script src="index.js"></script>
   </body>
 </html>
-k

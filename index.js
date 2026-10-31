@@ -1,16 +1,33 @@
 let savedLeads = [];
 let favLeads = [];
+const totalLeads = savedLeads + favLeads
 let editId = null;
-
+// render ids
 const saveLead = document.getElementById("leadCard");
 const favDbl = document.getElementById("leadCard2");
+
+//inputs  ids
 const addName = document.getElementById("add-input");
 const addStatus = document.getElementById("add-status");
 const addEmail = document.getElementById("add-email");
 const addComen = document.getElementById("add-opinion-input");
 const addDate = document.getElementById("add-date");
-
+const inputValue = document.getElementById("search-input")
 const saveBtn = document.getElementById("save-btn-input");
+
+//buttons ids
+const aboutBtn = document.getElementById("about-btn")
+const contactBtn = document.getElementById("contact-btn")
+const gitgubBtn = document.getElementById("github-btn")
+const dashboardBtn = document.getElementById("dashboard-btn")
+const dashboard = document.getElementById("dashboard");
+
+//counts
+const totalCountEl = document.getElementById("total-count");
+const savedCountEl = document.getElementById("saved-count");
+const favoriteCountEl = document.getElementById("favorite-count");
+
+
 
 saveBtn.addEventListener("click", function () {
   if (editId !== null) {
@@ -33,6 +50,18 @@ saveBtn.addEventListener("click", function () {
     render(favLeads, favDbl);
     return;
   }
+
+  if (
+   addName.value.trim()=== "" ||
+     addStatus.value.trim() === "" ||
+  addEmail.value.trim() === "" ||
+  addComen.value.trim() === "" ||
+  addDate.value.trim() === ""
+){
+  
+  alert("Please fill in all fields");
+  return
+}
 
   const obj = {
     id: Date.now(),
@@ -57,6 +86,9 @@ function clearInputs() {
   addComen.value = "";
   addDate.value = "";
 }
+
+
+
 
 function saveLeadsToStorage() {
   localStorage.setItem("savedLeads", JSON.stringify(savedLeads));
@@ -193,3 +225,35 @@ loadLeadsFromStorage();
 render(savedLeads, saveLead);
 render(favLeads, favDbl);
 
+
+inputValue.addEventListener("input", function(){
+  const searchLead = inputValue.value.trim().toLowerCase()
+  
+  const filterSaved = savedLeads.filter(function(lead){
+  return lead.name.toLowerCase().includes(searchLead);
+
+})
+ const filterFav = favLeads.filter(function(lead){
+  return lead.name.toLowerCase().includes(searchLead)
+
+ })
+  render(filterFav, favDbl)
+  render(filterSaved, saveLead)
+})
+
+function updateDashboard() {
+  const savedCount = savedLeads.length;
+  const favoriteCount = favLeads.length;
+  const totalCount = savedCount + favoriteCount;
+
+  savedCountEl.textContent = savedCount;
+  favoriteCountEl.textContent = favoriteCount;
+  totalCountEl.textContent = totalCount;
+}
+
+dashboardBtn.addEventListener("click", function () {
+  updateDashboard();
+
+  dashboard.hidden = !dashboard.hidden;
+  dashboardBtn.setAttribute("aria-expanded", String(!dashboard.hidden));
+});
