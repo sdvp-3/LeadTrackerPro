@@ -262,7 +262,7 @@ dashboardBtn.addEventListener("click", function () {
 
 function sortLeads(){
   const sortLead = [...savedLeads].sort(function(a, b){
-    return a.name.locale.Compare(b.name)
+    return a.name.localeCompare(b.name)
   })
 
   const favSortLead = [...favLeads].sort(function(a, b){
